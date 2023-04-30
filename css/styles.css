@@ -70,7 +70,7 @@ ul {
 }
 
 .header-wrapper {
-  border-bottom: 2px solid #ececec;
+  border-bottom: 1px solid #ececec;
   padding: 24px 0 25px;
 }
 
@@ -83,15 +83,6 @@ ul {
   font-size: 14px;
   line-height: 1.14;
   list-style: none;
-}
-
-.nav-list a {
-  color: var(--brand-color-light-black);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
 }
 
 .header-contacts {
@@ -132,20 +123,30 @@ ul {
   position: relative;
   color: var(--brand-color-light-black);
   transition: color var(--transition-set);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
 .nav-link:is(:hover, :focus) {
   color: var(--brand-color-blue);
 }
 
+.active {
+  color: var(--brand-color-blue);
+}
+
 .active::after {
-  content: "";
-    display: inline-block;
-    width: 100%;
-    left: 0;
-    margin-top: 45px;
-    position: absolute;
-    border-bottom: solid 4px #2196f3;
+  content: '';
+  display: inline-block;
+  width: 100%;
+  left: 0;
+  margin-top: 45px;
+  position: absolute;
+  border-bottom: solid 4px #2196f3;
+  border-radius: 2px;
 }
 
 .main-title {
@@ -339,7 +340,7 @@ ul {
   color: var(--icons-inactive);
 }
 
-.team-social-icon:is(:hover, :focus)>.social-icon-svg {
+.team-social-icon:is(:hover, :focus) > .social-icon-svg {
   fill: var(--brand-color-white);
 }
 
@@ -347,7 +348,7 @@ ul {
 
 .social-icon-svg {
   fill: var(--icons-inactive);
-  transition: color var(--transition-set);
+  transition: fill var(--transition-set);
 }
 
 .social-icons {
@@ -372,7 +373,7 @@ ul {
 
 .clients-icon-svg {
   fill: var(--icons-inactive);
-  transition: color var(--transition-set);
+  transition: fill var(--transition-set);
 }
 
 .clients-icon {
@@ -387,7 +388,7 @@ ul {
   border: 1px solid var(--brand-color-blue);
 }
 
-.clients-icon:is(:hover, :focus)>.clients-icon-svg {
+.clients-icon:is(:hover, :focus) > .clients-icon-svg {
   fill: var(--brand-color-blue);
 }
 
@@ -516,7 +517,7 @@ ul {
   color: var(--brand-color-white);
 }
 
-.footer-social-icon>.social-icon-svg {
+.footer-social-icon > .social-icon-svg {
   fill: var(--brand-color-white);
 }
 
@@ -558,7 +559,6 @@ ul {
 
 .portfolio-project {
   margin: 0px;
-  margin-top: 34px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -592,13 +592,6 @@ ul {
   border-top: none;
 }
 
-.portfolio-project {
-  margin: 0px;
-  margin-top: 34px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .portfolio-image-box {
   position: relative;
   overflow: hidden;
@@ -621,4 +614,3 @@ ul {
 .portfolio-card:hover .portfolio-cover {
   top: 0;
 }
-
